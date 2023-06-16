@@ -1,0 +1,46 @@
+package ereditarietà;
+import java.util.ArrayList;
+//Bank è una classe funzionalità x fornire il tasso.
+//Tasso varia a seconda delle banche: 
+//sbi 8%, icici 7%, axis 9%. 
+
+class Bank {
+
+private ArrayList<Float> tassi;
+
+public Bank(){
+    tassi = new ArrayList<>();
+    tassi.add(0.8f);
+    tassi.add(0.7f);
+    tassi.add(0.9f);
+}
+public ArrayList<Float> getRateOfInterest() {
+    return tassi;
+}
+
+}
+
+class SBI extends Bank {
+    public static void main(String[] args) {
+        SBI sbi = new SBI();
+        sbi.getRateOfInterest();
+        System.out.println("Tasso di SBI "+sbi.getRateOfInterest().get(0));
+        
+    }
+}
+
+class ICICI extends Bank {
+    public static void main(String[] args) {
+        ICICI ici = new ICICI();
+        ici.getRateOfInterest();
+        System.out.println("Tasso di ICICI "+ici.getRateOfInterest().get(1));
+    }
+}
+
+class AXIS extends Bank {
+    public static void main(String[] args) {
+        AXIS axis = new AXIS();
+        axis.getRateOfInterest();
+        System.out.println("Tasso di AXIS "+axis.getRateOfInterest().get(2));
+    }
+}
