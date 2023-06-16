@@ -1,17 +1,23 @@
 package ereditarietà;
 
-class Vehicle {
-    protected String brand = "Ford";
-    public void honk(){
-        System.out.println("tuuut");
+class Veicolo {
+    void run(){
+        System.out.println("Il veicolo è in marcia");
     }
 }
 
-class Car extends Vehicle{
-    private String modelName = "Fiat";
+class Bike extends Veicolo {
     public static void main(String[] args) {
-        Car myCar = new Car();
-        myCar.honk();
-        System.out.println(myCar.brand+" "+myCar.modelName);
-    } //eredito il brand e il metodo honk
+        Bike bike = new Bike();
+        bike.run();
+    }
+}
+
+class Bike2 extends Veicolo {
+    void run(){
+        System.out.println("Bici in sicurezza");}
+        public static void main(String[] args) { //NO 2 MAIN 
+            Bike2 bike2 = new Bike2();
+            bike2.run();
+        }
 }
